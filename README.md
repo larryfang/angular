@@ -1,4 +1,4 @@
-# ANZ Code Challenge
+# Earthquake Code Challenge
 
 > ## The purpose of creating this project is to help developers to learn AngularJS but please don't copy paste my code to pass any code challenge. 
 
