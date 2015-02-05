@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="myapp">
+
+<head>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=weather,visualization,panoramio"></script>
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/ng-map.min.js"></script>
+  <script src="app.js"></script>
+  <script src="controller.js"></script>
+  <script src="service.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+  <div ng-controller="MapCoordinatesCtrl" class="ng-scope">
+    <map center="current-location" zoom="2">
+    
+      <marker id="{{$index}}" ng-repeat="data in eqdata" position="[{{data.lat}}, {{data.lon}}]" on-click="click()" animation="Animation.BOUNCE" draggable="true" visible="true" >
+        
+      </marker>
+    
+    </map>
+  </div>
+
+</body>
+
+</html>
